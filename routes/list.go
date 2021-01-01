@@ -95,8 +95,7 @@ func iterate(path string) ([]Album, []Image, error) {
 func ListHandler(ctx echo.Context) error {
 	path := ctx.QueryParam("path")
 	if path == "" {
-		p := b64.URLEncoding.EncodeToString([]byte(config.C.BasePath + "/"))
-		return ctx.Redirect(http.StatusTemporaryRedirect, "/list?path="+p)
+		path = b64.URLEncoding.EncodeToString([]byte(config.C.BasePath + "/"))
 	}
 
 	decPath, err := b64.URLEncoding.DecodeString(path)
