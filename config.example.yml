@@ -1,3 +1,4 @@
 base_path: '/var/www/static'
 url_prefix: 'http://localhost:8080'
 address: ':8080'
+album_static_thumbnail: 'http://localhost:8080/albumart.png'

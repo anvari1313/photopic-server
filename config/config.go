@@ -7,9 +7,10 @@ import (
 )
 
 type Config struct {
-	BasePath  string `mapstructure:"base_path"`
-	URLPrefix string `mapstructure:"url_prefix"`
-	Address   string `mapstructure:"address"`
+	BasePath             string `mapstructure:"base_path"`
+	URLPrefix            string `mapstructure:"url_prefix"`
+	Address              string `mapstructure:"address"`
+	AlbumStaticThumbnail string `mapstructure:"album_static_thumbnail"`
 }
 
 var C *Config

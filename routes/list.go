@@ -57,7 +57,7 @@ func iterate(path string) ([]Album, []Image, error) {
 			directories = append(directories, Album{
 				Name:      fileInfo.Name(),
 				Path:      b64.URLEncoding.EncodeToString([]byte(path + fileInfo.Name() + "/")),
-				Thumbnail: "thumbnail",
+				Thumbnail: config.C.AlbumStaticThumbnail,
 			})
 		} else {
 			switch filepath.Ext(fileInfo.Name()) {
