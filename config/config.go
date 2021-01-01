@@ -7,7 +7,9 @@ import (
 )
 
 type Config struct {
-	BasePath string `mapstructure:"base_path"`
+	BasePath  string `mapstructure:"base_path"`
+	URLPrefix string `mapstructure:"url_prefix"`
+	Address   string `mapstructure:"address"`
 }
 
 var C *Config
