@@ -20,7 +20,7 @@ var serveCMD = &cobra.Command{
 }
 
 func serve() {
-	_, err := config.InitConfig()
+	_, err := config.InitConfig(configFilePath)
 	if err != nil {
 		log.Fatal(err)
 	}

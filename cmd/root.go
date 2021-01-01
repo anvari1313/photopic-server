@@ -15,8 +15,12 @@ var (
 	}
 )
 
+var configFilePath string
+
 func init() {
 	cobra.OnInitialize(configure)
+
+	rootCMD.PersistentFlags().StringVarP(&configFilePath, "config", "c", "config.yml", "config file")
 
 	rootCMD.AddCommand(serveCMD)
 }
